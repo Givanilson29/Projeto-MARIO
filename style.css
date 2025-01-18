@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulka', sans-serif;
+}
+
+
+.logo-mario {
+    height: 200px;
+    margin-left: 50px;
+}
+
+
+button {
+    color: white;
+    background-color: #C51111;
+    border-radius: 3px;
+    border: none;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+.imagem-mario-luigi {
+    height: 500px;
+}
+
+body { 
+    height: 100vh;
+}
+.caixa-mae {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px;
+    height: 100vh;
+    color: white;
+}
+
+.caixa-principal{
+    width: 40%;
+}
+
+.caixa-video {
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30px;
+}
+.header img {
+    height: 60px;
+}
+.header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration:none;
+}
+
+.header a:hover {
+    color: #C51111;
+    font-size: 26px;
+    transition: 0.5s color ease-in-out;
+}
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    left: -300px;
+    top: 30%;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+}
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #18d80f;
+}
+
+.mascara-formulario {
+    visibility: hidden; /*Visibility - significa visibilidade */
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: visibility 1s ease-in-out;
+    }
+/*
+    Inicial
+        top: 30%;
+        left: -300px;
+    
+    Final
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50);
+*/
+
+/* Media query 
+
+max -> Valor menor que Npx, aplica o css do MEDIA
+max -> Valor maior que Npx, aplica o css do MEDIA
+
+
+none (não) -> significa que eu não quero que apareça tal imagem na tela quando abrir o site no celular
+
+align-items: Alinha na VERTICAL
+justify-content: Alinha na HORIZONTAL
+
+Comandos para ajustar a tela do site ao abrir pelo celular */
+
+@media(max-width: 1100px){
+
+
+    p {
+        display: none;
+    }
+
+    .caixa-mae {
+        flex-direction: column; /* Deixa as imagens em coluna quando abrir o site no CELULAR */
+        justify-content: flex-start; /* Ajusta a logo do nome Mario na tela pelo celular */
+        padding: 10px; /* Diminue a logo do nome Mario na tela do CELULAR */
+    }
+
+    .caixa-principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .imagem-mario-luigi {
+        width: 80vw; /* Largura da imagem */
+        height: auto; /* Altura da imagem */
+    }
+
+    .header {
+        margin: 10px;
+        display: flex;
+        align-items: center; /* Alinha na VERTICAL */
+        justify-content: center; /* Alinha na HORIZONTAL */
+    }
+
+    .header img {
+        display: none; /* Esse comando vai sumir a imagem da cabeça do Mario no celular */
+    }
+
+    .header a {
+        font-size: 20px; /* Esse comando diminie a fonte do texto-menu na tela ao abrir no celular */
+    }
+
+}

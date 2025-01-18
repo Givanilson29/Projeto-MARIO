@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!--Padrão de caracteres do titulo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mario Bros</title>
+</head>
+
+<body>
+    <div class="mascara-formulario" onclick="esconderForm()"></div> <!--Esse onclik vai esconder a tabela que mostra na tela ao click-->
+
+    <div class="header">
+        <img src="./img/logo-header.png" alt="logo mario">
+        <a>Home</a>
+        <a href="nossos-servicos.html">Nossos Serviços</a>
+        <a>Fale Conosco</a>
+        
+    </div>
+
+    <div class="caixa-mae">
+        <div class="caixa-principal">
+            <img src="./img/logo.png" alt="logo do mario bros" class="logo-mario">
+            <p>Encanadores Mario e Luigi - Resolvendo Seus Problemas Com Estilo!</p>
+            <p>Você já se encontrou em uma situaçã de emergência com encanamento?</p>
+
+            <button onclick="mostrarForm()">Entre em contato</button>
+        </div>
+        <div>
+            <img src="/img/mario.png" alt="logo mario e luigi" class="imagem-mario-luigi">
+        </div>
+    </div>
+
+
+    <div class="caixa-video">
+        <video src="/img/video.mp4" autoplay muted loop></video>
+        <div class="mascara"></div>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=5511926662255&text=Ola,%20quero%20falar%20com%20os%20irm%C3%A3os%20mario!" class="link-whatsapp">
+        <img src="./img/whatsapp.png" alt="link para o whatsapp">
+    </a>
+
+    <form class="formulario-fale-conosco">
+        <input placeholder="Seu nome">
+        <input placeholder="Seu telefone">
+        <textarea placeholder="Digite seu pronlema aqui.."></textarea> <!--Esse textarea não precisa adicionar o type pois ele já é um texto-->
+        <button>Pedir Orçamento</button>
+    </form>
+
+</body>
+
+<script src="scripts.js"></script>
+
+</html>
